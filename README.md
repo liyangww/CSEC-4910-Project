@@ -9,7 +9,8 @@ This repository contains all the deliverables for my senior project in Computer 
 ## Repository Structure
 
 - **thesis/**  
-    Compile `main.tex` in the folder to build the thesis PDF from source files.
+    Compile `main.tex` in the folder to build the thesis PDF from source files. A copy of the compiled PDF is also included for convenience.
+
 - **notebooks/**  
   Jupyter notebooks for each stage:
   - `01_data_exploration.ipynb`: Data loading and initial analysis.

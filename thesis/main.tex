@@ -23,24 +23,61 @@
 
 \begin{document}
 
-\title{What Makes a Good Macro Regime?\\
-A Comparative Evaluation of Clustering-Based and Markov-Switching Models\\
-on High-Dimensional U.S. Macroeconomic Data}
+\begin{titlepage}
+\centering
 
-\author{
-{\normalsize Liyang Wang}\\
-{\normalsize Thesis Advisor: Professor Alex Wong}
-}
+\vspace*{1.6in}
 
-\date{} 
+{\Large\bfseries What Makes a Good Macro Regime?\par}
+\vspace{0.25in}
+{\Large A Comparative Evaluation of Clustering-Based and Markov-Switching Models\\
+on High-Dimensional U.S. Macroeconomic Data\par}
 
-\maketitle
+\vspace{1.3in}
+
+{\normalfont Liyang Wang\par}
+
+\vspace{0.2in}
+
+{\normalfont Advisor: Alex Wong\par}
+
+\vfill
+
+{\normalfont Senior Thesis\par}
+\vspace{0.15in}
+{\normalfont Yale Department of Computer Science and Economics\par}
+\vspace{0.1in}
 
 
-\begin{abstract}
+\end{titlepage}
+
+
+% ---------- Abstract (page 2) ----------
+\clearpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\begin{center}
+{\large \bfseries Abstract}
+\end{center}
+
+\vspace{0.5in}
+
 Macroeconomic dynamics are often described as evolving through ``regimes''—persistent phases such as expansions, contractions, or high-inflation environments. At the same time, modern empirical macroeconomics increasingly relies on large panels of indicators, creating a tension between rich information sets and the practical need for interpretable, low-dimensional state descriptions. This thesis presents a detailed comparative evaluation of macroeconomic regime identification methods, from machine learning clustering techniques to the econometric tradition of Markov-switching models. I examine five approaches---fuzzy C-Means, modified K-Means following \citet{OliveiraEtAl2025}, vanilla K-Means, Gaussian Mixture Models, and Markov-switching---applied to 760 months of U.S.\ macroeconomic data from the FRED-MD database. The evaluation framework combines standard clustering diagnostics (silhouette scores, Davies-Bouldin index) with criteria grounded in economic intuition about how regimes should behave over time: transition stability metrics (switching frequency, total variation, chattering behavior) and predictive coherence metrics (transition structure, one-step predictability) that reflect the expectation that macroeconomic regimes represent persistent states rather than transient fluctuations. The results illustrate a systematic trade-off between cross-sectional cluster quality and temporal coherence, clarifying when each methodological family is better suited to common macroeconomic applications.
-\end{abstract}
 
+\clearpage
+
+
+% ---------- Table of contents (page 3) ----------
+\begingroup
+\small
+\tableofcontents
+\endgroup
+\clearpage
+% ---------- Main text starts ----------
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \section{Introduction}
 
 Macroeconomic time series are difficult to model and predict for several reasons that have been well documented in the forecasting literature. Many macro variables exhibit structural breaks, changing relationships over time, and non-linearities that are hard to capture with simple linear models. At the same time, modern empirical work often uses large panels of indicators that contain dozens/hundreds of time series which raises the high-dimensional issues of which variables to use, how to regularize, and how to avoid overfitting when the data span is limited relative to the number of predictors.
