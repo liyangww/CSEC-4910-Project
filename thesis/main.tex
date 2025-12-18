@@ -39,7 +39,7 @@ on High-Dimensional U.S. Macroeconomic Data\par}
 
 \vspace{0.2in}
 
-{\normalfont Advisor: Alex Wong\par}
+{\normalfont Advisor: Professor Alex Wong\par}
 
 \vfill
 
@@ -211,12 +211,6 @@ Extreme observations could disproportionately influence clustering algorithms, p
 The analysis reveals that extreme observations cluster around well-known economic disruptions. The COVID-19 shock of March--May 2020 produced by far the most extreme observations in the sample, with Mahalanobis distances exceeding 14---roughly 10 standard deviations from normal in multivariate terms. This reflects the unprecedented simultaneity of the shock: employment, output, consumption, and financial measures all moved to historically extreme values within weeks. The October--November 2008 period following the Lehman Brothers collapse also appears as a clear outlier, as does the Volcker disinflation period of early 1980 when the Federal Reserve pushed interest rates to unprecedented levels.
 
 Rather than removing these outliers, I retain them in the analysis for two reasons. First, extreme periods like March 2020 represent genuine economic states that a regime model should identify---the ability to detect crisis regimes is a key desideratum, not a nuisance. Second, excluding outliers would require arbitrary threshold choices that could bias results. The Modified K-Means method of \citet{OliveiraEtAl2025} explicitly isolates ``atypical'' periods through its two-stage procedure, providing one principled approach to handling extremes within the modeling framework rather than through preprocessing.
-
-\subsubsection{Temporal dependence.}
-
-Although clustering methods treat observations as exchangeable---assigning regimes based solely on the current feature vector without regard to temporal context---the underlying macroeconomic data exhibit substantial persistence. The average first-order autocorrelation across standardized series is 0.23, with considerable heterogeneity: financial variables like the federal funds rate and unemployment rate show autocorrelations exceeding 0.8, while differenced series like industrial production growth are closer to white noise with autocorrelations around 0.1.
-
-This persistence is economically natural. Macroeconomic conditions evolve gradually: recessions do not arrive without warning, and recoveries build momentum over multiple quarters. The challenge for clustering-based regime identification is that methods ignoring this temporal structure may produce regime sequences that oscillate rapidly, assigning consecutive months to different regimes even when underlying conditions change only marginally. This observation directly motivates the evaluation criteria developed in Section~5: by measuring transition frequency, chattering, and predictive coherence, I explicitly assess whether identified regimes exhibit the temporal continuity expected of genuine macroeconomic states.
 
 \subsection{Summary Statistics}
 
