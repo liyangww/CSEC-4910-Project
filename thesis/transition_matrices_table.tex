@@ -1,0 +1,62 @@
+\begin{table}[htbp]
+\centering
+\caption{Estimated Transition Matrices by Method}
+\label{tab:transition_matrices}
+\small
+
+\textbf{Fuzzy C--Means}\\[0.5em]
+\begin{tabular}{c|cccc}
+ & R1 & R2 & R3 & R4 \\
+\hline
+R1 & 0.822 & 0.178 & 0.000 & 0.000 \\
+R2 & 0.141 & 0.857 & 0.002 & 0.000 \\
+R3 & 0.000 & 1.000 & 0.000 & 0.000 \\
+R4 & 0.000 & 0.000 & 0.000 & 0.000 \\
+\end{tabular}\\[1em]
+
+\textbf{Modified K--Means}\\[0.5em]
+\begin{tabular}{c|cccc}
+ & R1 & R2 & R3 & R4 \\
+\hline
+R1 & 0.000 & 0.000 & 1.000 & 0.000 \\
+R2 & 0.000 & 0.895 & 0.050 & 0.055 \\
+R3 & 0.000 & 0.021 & 0.859 & 0.121 \\
+R4 & 0.005 & 0.059 & 0.234 & 0.702 \\
+\end{tabular}\\[1em]
+
+\textbf{Vanilla K--Means}\\[0.5em]
+\begin{tabular}{c|cccc}
+ & R1 & R2 & R3 & R4 \\
+\hline
+R1 & 0.586 & 0.107 & 0.300 & 0.007 \\
+R2 & 0.081 & 0.865 & 0.054 & 0.000 \\
+R3 & 0.099 & 0.025 & 0.875 & 0.000 \\
+R4 & 0.000 & 0.000 & 1.000 & 0.000 \\
+\end{tabular}\\[1em]
+
+\textbf{GMM}\\[0.5em]
+\begin{tabular}{c|cccc}
+ & R1 & R2 & R3 & R4 \\
+\hline
+R1 & 0.676 & 0.206 & 0.029 & 0.088 \\
+R2 & 0.061 & 0.714 & 0.102 & 0.122 \\
+R3 & 0.007 & 0.041 & 0.859 & 0.093 \\
+R4 & 0.000 & 0.080 & 0.090 & 0.830 \\
+\end{tabular}\\[1em]
+
+\textbf{Markov--Switching}\\[0.5em]
+\begin{tabular}{c|cccc}
+ & R1 & R2 & R3 & R4 \\
+\hline
+R1 & 0.962 & 0.012 & 0.026 & 0.000 \\
+R2 & 0.130 & 0.826 & 0.043 & 0.000 \\
+R3 & 0.006 & 0.023 & 0.968 & 0.003 \\
+R4 & 0.250 & 0.000 & 0.000 & 0.750 \\
+\end{tabular}\\[1em]
+
+\begin{minipage}{\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} Each matrix shows $\widehat{p}_{ij} = \Pr(R_{t+1}=j \mid R_t=i)$ estimated from hard regime assignments. Diagonal elements indicate self-transition (persistence) probabilities. Higher diagonal values indicate more stable regimes.
+\end{minipage}
+\end{table}

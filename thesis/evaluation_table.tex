@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\caption{Comparative Evaluation of Macroeconomic Regime Modeling Methods}
+\label{tab:regime_evaluation}
+\small
+\setlength{\tabcolsep}{3.5pt}  % default is 6pt
+\renewcommand{\arraystretch}{0.95}
+\begin{tabular}{@{}l|ccc|c|c|ccc|cc@{}}
+\toprule
+& \multicolumn{3}{c|}{Transition Stability} & Duration & Robustness & \multicolumn{3}{c|}{Predictive Coherence} & \multicolumn{2}{c}{Clustering Quality} \\
+Method & $\widehat{\lambda}$ & TV & $\widehat{C}$ & (months) & $\widehat{D}$ & LL & Acc. & Self-Trans. & Silh. & D-B \\
+\midrule
+Fuzzy C-Means    & 0.159 & 0.000 & 48 &  6.2 & 0.000 & $-1.386$ & 0.842 & 0.420 & $-0.166$ & 2.81 \\
+Modified K-Means & 0.173 & 0.053 & 53 &  5.8 & 0.593 & $-1.123$ & 0.829 & 0.614 &    0.064 & 2.45 \\
+Vanilla K-Means  & 0.182 & 0.063 & 53 &  5.5 & 0.476 & $-1.110$ & 0.819 & 0.581 &    0.050 & 2.36 \\
+GMM              & 0.188 & 0.383 & 50 &  5.3 & 1.225 & $-0.625$ & 0.812 & 0.770 &    0.001 & 4.70 \\
+Markov-Switching & 0.049 & 0.104 &  0 & 20.0 & 1.225 & $-0.289$ & 0.951 & 0.877 &    0.027 & 4.35 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} $\widehat{\lambda}$ = transition frequency (lower is more stable); TV = total variation of soft assignments; $\widehat{C}$ = chattering count (one-period spikes); $\widehat{D}$ = robustness to perturbations (lower is more robust); LL = log-likelihood of regime predictions (higher is better); Acc.\ = hard prediction accuracy; Self-Trans.\ = average self-transition probability; Silh.\ = silhouette score (higher is better); D-B = Davies-Bouldin index (lower is better). Sample: July 1962--October 2025 ($T=760$).
+\end{minipage}
+\end{table}

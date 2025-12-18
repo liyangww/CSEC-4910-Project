@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Regime Distribution by Method (\% of Observations)}
+\label{tab:regime_distribution}
+\begin{tabular}{lcccc|c}
+\toprule
+Method & R1 & R2 & R3 & R4 & Entropy \\
+\midrule
+Fuzzy C--Means & 43.7 & 56.2 & 0.1 & 0.0 & 0.501 \\
+Modified K--Means & 0.1 & 23.8 & 51.2 & 24.9 & 0.750 \\
+Vanilla K--Means & 18.4 & 24.5 & 57.0 & 0.1 & 0.711 \\
+GMM & 4.5 & 19.3 & 38.3 & 37.9 & 0.860 \\
+Markov--Switching & 45.3 & 9.1 & 45.1 & 0.5 & 0.695 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} Percentages based on hard regime assignments ($\arg\max_i w_{i,t}$). Entropy is normalized to $[0,1]$ where 1 indicates uniform distribution across all four regimes. Sample: $T=760$ months.
+\end{minipage}
+\end{table}

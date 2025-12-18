@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Regime Duration Statistics by Method}
+\label{tab:duration_stats}
+\begin{tabular}{lccccc}
+\toprule
+Method & Spells & Mean & Median & Max & Std. Dev. \\
+\midrule
+Fuzzy C--Means & 122 & 6.2 & 2 & 113 & 12.3 \\
+Modified K--Means & 132 & 5.8 & 2 & 104 & 11.3 \\
+Vanilla K--Means & 139 & 5.5 & 2 & 102 & 10.9 \\
+GMM & 144 & 5.3 & 2 & 124 & 11.4 \\
+Markov--Switching & 38 & 20.0 & 12 & 129 & 23.5 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} Duration measured in months. Spells = number of distinct regime episodes. Higher mean/median durations indicate more persistent regime classifications.
+\end{minipage}
+\end{table}
